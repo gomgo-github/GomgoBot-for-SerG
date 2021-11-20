@@ -1,13 +1,71 @@
 const { Token } = require("./Token.js")
 const Discord = require("discord.js");
 const Client = new Discord.Client();
-const Prefix = "gmg!"
+const Prefix = "gas!"
 
 const HelpMenu = new Discord.MessageEmbed()
-    .setColor('#1c1c1c')
-    .setTitle('Comandos')
-    .setAuthor('BLUE-BOT', 'https://cdn.discordapp.com/avatars/719565192928690316/aeb9d7f45bca1a33eb5ae0a027fb4ab4.png?size=4096')
-    .setDescription('1. gmg!help: :question: este comando te dice que otros comandos hay y como usarlos.\n2. ping: :ping_pong: te dice el PING al server.\n3. gmg!yt: :arrow_forward: El canal de Youtube de @Gomgo_Discord#8012\n4. teniendo en cuenta que soy un poco Troll :clown: te ayudare cuando digas ‟no se”\n5. gmg!saludodellegada: en caso de que quieras ver mi discurso de presentacion usa este comando\n6. gmg!discord: el Discord de jugadores Oficial y Por Temporadas\n7. -help `command`: substituye command por cualquiera de los comando de esta lista para recivir info del comando en concreto\n8. gmg!creator : Informacion sobre mi Canal de Youtube y mi persona')
-    .setFooter('Creado por Gomgo', 'https://cdn.discordapp.com/avatars/694578441407954966/5957c8ae5b5eae0edf4ad85531b75f6d.png?size=4096');
+    .setColor('#000000')
+    .setTitle('Menu de ayuda')
+    .setDescription('1. `gas!help`: comando genérico de ayuda, te muestra otros comandos y como usarlos.\n2. `gas!promo`: Te muestra las redes y donde informarte del Proyecto\n3. `gas!web`: Enlace a la página web actual del proyecto!\n4. `gas!twtr`: Cuenta de Twitter de Gasware Programming\n5. `gas!ig`: Cuenta de Instagram de Gasware Programming\n6. `gas!youtube`: Canal de Youtube de Gasware Programming\n7. `gas!price`: Precio actual de los Cursos\n8. `gas!staff`: Usuarios del Staff de Gasware Programming que te pueden ayudar si tienes algun problema\n9. `gas!bug`: Has encontrado un Bug! Usa este comando para reportarlo y lo leeremos cuanto antes para arreglarlo!')
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096');
 
-module.exports = { Discord, Client, Prefix, Token, HelpMenu }
+const PromoMenu = new Discord.MessageEmbed()
+    .setColor('#ab84ff')
+    .setTitle("Redes Sociales")
+    .setThumbnail("https://cdn.discordapp.com/avatars/860541010689785886/47a50df05396060a5b6e61cdd5b71d53.png?size=1024")
+    .setDescription("Estas son las redes sociales del Proyecto!")
+    .addFields(
+      {name: 'Twitter', value: 'https://twitter.com/Gasware1', inline: true },
+      {name: 'Instagram', value: 'https://www.instagram.com/gaswareprogramming', inline: true },
+      {name: 'YouTube', value: 'https://bit.ly/gaswareyt', inline: true },
+      {name: 'Web', value: 'http://gasware.nicepage.io', inline: true }
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+const YouTubeMenu = new Discord.MessageEmbed()
+    .setColor('#fc0707')
+    .setTitle("Youtube")
+    .setThumbnail("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdwglogo.com%2Fwp-content%2Fuploads%2F2020%2F05%2F1200px-YouTube_logo.png&f=1&nofb=1")
+    .setDescription("En nuestro Canal de YouTube podras encontrar tutoriales para seguir aprendiendo programación, recomendamos activar las notificaciones para saber cuando hay un vídeo nuevo!")
+    .addFields(
+      {name: 'YouTube', value: 'https://www.youtube.com/channel/UCxgx_mIyPZ2x_iUqFLYlUNw'}
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+const TwitterMenu = new Discord.MessageEmbed()
+    .setColor('#077dfc')
+    .setTitle("Twitter")
+    .setThumbnail("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flogok.org%2Fwp-content%2Fuploads%2F2014%2F08%2FTwitter-logo-bird_logo_2012.png&f=1&nofb=1")
+    .setDescription("En Twitter podrás ver todas las noticias sobre el proyecto, Puede que tambien veas alguna oferta exclusiva!")
+    .addFields(
+      {name: 'Twitter', value: 'https://twitter.com/Gasware1'}
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+const InstagramMenu = new Discord.MessageEmbed()
+    .setColor('#fc07aa')
+    .setTitle("Instagram")
+    .setThumbnail("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmagnavitae.org%2Fwp-content%2Fuploads%2F2016%2F11%2Finstagram-logo-png-transparent-background-800x799.png&f=1&nofb=1")
+    .setDescription("En Instagram tendras noticias y avances del Proyecto, si no quieres perdertelas ve a seguirnos!")
+    .addFields(
+      {name: 'Instagram', value: 'https://instagram.com/gaswareprogramming'}
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+const WebMenu = new Discord.MessageEmbed()
+    .setColor('#fc07aa')
+    .setTitle("Website")
+    .setDescription("En nuestra web podras ver todos los avances y podras acceder a ellos!")
+    .addFields(
+      {name: 'Web', value: 'http://gasware.nicepage.io'}
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+
+module.exports = { Discord, Client, Prefix, Token, HelpMenu, PromoMenu, YouTubeMenu, InstagramMenu, WebMenu, TwitterMenu }
