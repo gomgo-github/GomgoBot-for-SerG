@@ -1,7 +1,7 @@
 {
-  "name": "gomgobot",
+  "name": "Gasware Bot",
   "version": "1.0.0",
-  "description": "El bot oficial de Gomgo",
+  "description": "Bot de Discord de Gasware Programming",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/gomgo-github"
   },
-  "author": "Gomgo",
+  "author": "Gomgo // Blue Unity Scratch",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1"

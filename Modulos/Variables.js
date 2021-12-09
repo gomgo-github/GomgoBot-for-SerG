@@ -58,8 +58,9 @@ const InstagramMenu = new Discord.MessageEmbed()
     .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
 
 const WebMenu = new Discord.MessageEmbed()
-    .setColor('#fc07aa')
+    .setColor('#000000')
     .setTitle("Website")
+    .setThumbnail("https://cdn.discordapp.com/emojis/910250565764780052.png?size=1024")
     .setDescription("En nuestra web podras ver todos los avances y podras acceder a ellos!")
     .addFields(
       {name: 'Web', value: 'http://gasware.nicepage.io'}
@@ -67,5 +68,92 @@ const WebMenu = new Discord.MessageEmbed()
     .setTimestamp()
     .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
 
+const CPPPricing = new Discord.MessageEmbed()
+    .setColor('#000000')
+    .setTitle("C++")
+    .setThumbnail("https://cdn.discordapp.com/emojis/910250566091948062.png?size=1024")
+    .setDescription("Nuestros cursos de C++ de Nivel Básico a Maestro!")
+    .addFields(
+      {name: 'BASIC', value: '\n5€/clase \no \n13€/3clases \n(14% de descuento)', inline: true},
+      {name: 'MEDIUM', value: '\n7€/clase \no \n24€/4clases \n(15% de descuento)', inline: true},
+      {name: 'Advanced', value: '8€/clase \no \n38€/6clases\n (21% de descuento)', inline: true},
+      {name: 'COMPLETE', value: '70€/13clases'},
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
 
-module.exports = { Discord, Client, Prefix, Token, HelpMenu, PromoMenu, YouTubeMenu, InstagramMenu, WebMenu, TwitterMenu }
+const CPricing = new Discord.MessageEmbed()
+    .setColor('#000000')
+    .setTitle("C")
+    .setThumbnail("https://cdn.discordapp.com/emojis/910250566163234867.png?size=1024")
+    .setDescription("Nuestros cursos de C de Nivel Básico a Maestro!")
+    .addFields(
+      {name: 'BASIC', value: '\n5€/clase \no \n13€/3clases \n(14% de descuento)', inline: true},
+      {name: 'MEDIUM', value: '\n6€/clase \no \n22€/4clases \n(9% de descuento)', inline: true},
+      {name: 'COMPLETE', value: '30€/7clases'},
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+const PyPricing = new Discord.MessageEmbed()
+    .setColor('#000000')
+    .setTitle("Python")
+    .setThumbnail("https://cdn.discordapp.com/emojis/910250565966123128.png?size=1024")
+    .setDescription("Nuestros cursos de Python de Nivel Básico a Maestro!")
+    .addFields(
+      {name: 'BASIC', value: '\n5€/clase \no \n13€/3clases \n(14% de descuento)', inline: true},
+      {name: 'MEDIUM', value: '\n5€/clase \no \n13€/3clases \n(15% de descuento)', inline: true},
+      {name: 'COMPLETE', value: '35€/7clases'},
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+const DDPricing = new Discord.MessageEmbed()
+    .setColor('#000000')
+    .setTitle("2D")
+    .setThumbnail("https://cdn.discordapp.com/emojis/910250565899010088.png?size=1024")
+    .setDescription("Nuestros cursos de 2D de Nivel Básico a Maestro!")
+    .addFields(
+      {name: 'BASIC', value: '\n4€/clase \no \n10€/3clases \n(17% de descuento)', inline: true},
+      {name: 'MEDIUM', value: '\n6€/clase \no \n22€/4clases \n(9% de descuento)', inline: true},
+      {name: 'Advanced', value: '7€/clase \no \n33€/5clases\n (6% de descuento)', inline: true},
+      {name: 'COMPLETE', value: '70€/12clases'},
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+const VEPricing = new Discord.MessageEmbed()
+    .setColor('#000000')
+    .setTitle("Edición de Vídeo")
+    .setThumbnail("https://cdn.discordapp.com/emojis/910250924658810911.png?size=80&size=1024")
+    .setDescription("Nuestros cursos de Edición de Vídeo de Nivel Básico a Maestro!")
+    .addFields(
+      {name: 'BASIC', value: '\n5€/clase \no \n18€/4clases \n(10% de descuento)', inline: true},
+      {name: 'MEDIUM', value: '\n7€/clase \no \n20€/3clases \n(5% de descuento)', inline: true},
+      {name: 'Advanced', value: '10€/clase \no \n48€/5clases\n (4% de descuento)', inline: true},
+      {name: 'COMPLETE', value: '90€/12clases'},
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+const WebDevPricing = new Discord.MessageEmbed()
+    .setColor('#000000')
+    .setTitle("WebDev")
+    .setThumbnail("https://cdn.discordapp.com/emojis/910250565764780052.png?size=1024")
+    .setDescription("Nuestros cursos de WebDev de Nivel Básico a Maestro!")
+    .addFields(
+      {name: 'BASIC', value: '\n4€/clase \no \n15€/4clases \n(17% de descuento)', inline: true},
+      {name: 'MEDIUM', value: '\n6€/clase \no \n40€/7clases \n(5% de descuento)', inline: true},
+      {name: 'Advanced', value: '7€/clase \no \n33€/5clases\n (6% de descuento)', inline: true},
+      {name: 'COMPLETE', value: '85€/14clases'},
+    )
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+
+const Cursos = new Discord.MessageEmbed()
+    .setColor('#000000')
+    .setTitle("Precios")
+    .setDescription("Para ver los precios tienes que decirme cual quieres ver:\ngas!price C++\ngas!price C\ngas!price Python\ngas!price 2D\n`gas!price EdicionDeVideo`: Sin tildes ni espacios!\ngas!price WebDev\n\n`gas!price all`: Para ver todos los cursos")
+    .setTimestamp()
+    .setFooter('GaswareBot', 'https://cdn.discordapp.com/icons/826004185303875585/df096aa8d63e9290702625b8c16768fb.png?size=4096')
+module.exports = { Discord, Client, Prefix, Token, HelpMenu, PromoMenu, YouTubeMenu, InstagramMenu, WebMenu, TwitterMenu, CPPPricing, CPricing, PyPricing, DDPricing, VEPricing, WebDevPricing, Cursos }
